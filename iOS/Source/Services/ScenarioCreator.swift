@@ -21,10 +21,18 @@ final class Scenario {
 
     var events = [Event]()
     var timer: Timer?
+    private(set) var timeString = ""
 
     func createScenario() {
         self.events = randomSessionEvents()
     }
+    
+    private lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm:ss"
+        
+        return dateFormatter
+    }()
 
     func executeScenario() {
         if let firstEvent = self.events.first {
@@ -39,8 +47,8 @@ final class Scenario {
         events.append(Event(type: .read, delay: self.randomEventDelay()))
 
         for _ in 0...Int(arc4random_uniform(2) + 1) {
-            events.append(Event(type: .pause, delay: self.randomEventDelay()))
             events.append(Event(type: .type, delay: self.randomEventDelay()))
+            events.append(Event(type: .pause, delay: 3.0))
         }
 
         events.append(Event(type: .response, delay: self.randomEventDelay()))
@@ -49,7 +57,7 @@ final class Scenario {
     }
 
     private func randomEventDelay() -> Double {
-        return Double(arc4random_uniform(10)) + 3
+        return Double(arc4random_uniform(5)) + 3
     }
 
     private func schedule(event: Event) {
@@ -84,6 +92,7 @@ final class Scenario {
         case .pause:
             self.delegate?.didPause(on: self)
         case .response:
+            self.timeString = self.dateFormatter.string(from: Date())
             self.delegate?.didResponse(on: self)
         default: break
         }
