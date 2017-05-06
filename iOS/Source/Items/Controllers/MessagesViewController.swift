@@ -81,6 +81,8 @@ class MessagesViewController: UIViewController {
         collectionView.left(to: view)
         collectionView.right(to: view)
         collectionView.bottomToTop(of: textInputView)
+        
+        collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 15.0, right: 0.0)
     }
     
     func calculateSize(for indexPath: IndexPath) -> CGSize {
@@ -93,9 +95,9 @@ extension MessagesViewController: MessageInputViewDelegate {
     
     func messageInputViewDidRequireSendMessage(inputView: MessageInputView) {
         if let text = inputView.textField.text as String? {
-            self.messages.append(Message(title: "Clock", text: text, didSent: true, image: nil))
+            self.messages.append(Message(title: "Y.O.U.", text: text, didSent: true, image: nil))
             collectionView.reloadData()
-            collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height)
+            collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height - 15.0)
         }
     }
 }
