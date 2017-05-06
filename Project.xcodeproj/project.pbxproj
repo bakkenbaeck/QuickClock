@@ -21,7 +21,7 @@
 		14CB87E71C96F94F007376A6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14CB87E41C96F94F007376A6 /* DataModel.xcdatamodeld */; };
 		D197B27F33FDD2855C982B8C /* ScenarioCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B077AE49CE1DF16BA161 /* ScenarioCreator.swift */; };
 		D197B708E58219848BAB58EF /* ScenarioCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197B077AE49CE1DF16BA161 /* ScenarioCreator.swift */; };
-		D197BDAC2AB279F477FED5EC /* ScenarioCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BA18359ED44CF6B01263 /* ScenarioCreatorTests.swift */; };
+		D197BDAC2AB279F477FED5EC /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BA18359ED44CF6B01263 /* Scenario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		1483128C1B92C11500266943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14CB87E51C96F94F007376A6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		D197B077AE49CE1DF16BA161 /* ScenarioCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenarioCreator.swift; sourceTree = "<group>"; };
-		D197BA18359ED44CF6B01263 /* ScenarioCreatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenarioCreatorTests.swift; sourceTree = "<group>"; };
+		D197BA18359ED44CF6B01263 /* Scenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				1483128C1B92C11500266943 /* Info.plist */,
-				D197BA18359ED44CF6B01263 /* ScenarioCreatorTests.swift */,
+				D197BA18359ED44CF6B01263 /* Scenario.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -346,7 +346,7 @@
 				14425E5A1C97078A00F0FAD1 /* Fetcher.swift in Sources */,
 				14425E561C97078A00F0FAD1 /* Theme+Font.swift in Sources */,
 				D197B27F33FDD2855C982B8C /* ScenarioCreator.swift in Sources */,
-				D197BDAC2AB279F477FED5EC /* ScenarioCreatorTests.swift in Sources */,
+				D197BDAC2AB279F477FED5EC /* Scenario.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

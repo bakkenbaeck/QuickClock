@@ -1,11 +1,14 @@
 import Foundation
 
-final class ScenarioCreator {
+final class Scenario {
     var events = [Event]()
     var timer: Timer?
 
-    func executeScenario() {
+    func createScenario() {
         self.events = randomSessionEvents()
+    }
+
+    func executeScenario() {
         if let firstEvent = self.events.first {
             schedule(event: firstEvent)
         }
@@ -86,4 +89,3 @@ class Event {
         self.delay = delay
     }
 }
-
