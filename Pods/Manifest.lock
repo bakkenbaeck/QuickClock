@@ -1,0 +1,15 @@
+PODS:
+  - BouncyLayout (1.0.0)
+  - TinyConstraints (2.1.1)
+
+DEPENDENCIES:
+  - BouncyLayout
+  - TinyConstraints
+
+SPEC CHECKSUMS:
+  BouncyLayout: b9db2f044f5d066479a4bd57ddc46a18240d0316
+  TinyConstraints: 4162762831c5e2001f7eefb07056db14e3dcc422
+
+PODFILE CHECKSUM: fa2a445a6be94f2726ae64ce049258d614e9cc10
+
+COCOAPODS: 1.2.1
