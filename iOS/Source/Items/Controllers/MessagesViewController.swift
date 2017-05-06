@@ -43,7 +43,7 @@ class MessagesViewController: UIViewController {
         view.register(MessageCell.self, forCellWithReuseIdentifier: MessageCell.reuseIdentifier)
         view.delegate = self
         view.dataSource = self
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+        view.backgroundColor = .white
         (view as UIScrollView).keyboardDismissMode = .interactive
         
         return view
