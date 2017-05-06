@@ -21,6 +21,7 @@
 		14CB87E71C96F94F007376A6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14CB87E41C96F94F007376A6 /* DataModel.xcdatamodeld */; };
 		2B0E40AB1EBDFFAE001A42D6 /* UIColor+QuickClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0E40AA1EBDFFAE001A42D6 /* UIColor+QuickClock.swift */; };
 		2B0E40AD1EBE0002001A42D6 /* String+QuickClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0E40AC1EBE0002001A42D6 /* String+QuickClock.swift */; };
+		2B0E40AF1EBE004B001A42D6 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0E40AE1EBE004B001A42D6 /* MessageInputView.swift */; };
 		2BBE4BBA1EBDF35500E9A772 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE4BB91EBDF35500E9A772 /* MessageCell.swift */; };
 		2BBE4BBD1EBDF36900E9A772 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE4BBC1EBDF36900E9A772 /* Message.swift */; };
 		2BBE4BBF1EBDF3EA00E9A772 /* UIView+QuickClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE4BBE1EBDF3EA00E9A772 /* UIView+QuickClock.swift */; };
@@ -43,6 +44,7 @@
 		14CB87E51C96F94F007376A6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		2B0E40AA1EBDFFAE001A42D6 /* UIColor+QuickClock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+QuickClock.swift"; sourceTree = "<group>"; };
 		2B0E40AC1EBE0002001A42D6 /* String+QuickClock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+QuickClock.swift"; sourceTree = "<group>"; };
+		2B0E40AE1EBE004B001A42D6 /* MessageInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 		2BBE4BB91EBDF35500E9A772 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		2BBE4BBC1EBDF36900E9A772 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Model/Message.swift; sourceTree = "<group>"; };
 		2BBE4BBE1EBDF3EA00E9A772 /* UIView+QuickClock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+QuickClock.swift"; path = "Extension/UIView+QuickClock.swift"; sourceTree = "<group>"; };
@@ -101,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				2BBE4BBB1EBDF35F00E9A772 /* Model */,
-				1459F0DD1DBD20F000311892 /* Cells */,
+				1459F0DD1DBD20F000311892 /* Views */,
 				144DD08C1DB3B8400037C92E /* Controllers */,
 			);
 			path = Items;
@@ -126,11 +128,13 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		1459F0DD1DBD20F000311892 /* Cells */ = {
+		1459F0DD1DBD20F000311892 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				2BBE4BB91EBDF35500E9A772 /* MessageCell.swift */,
+				2B0E40AE1EBE004B001A42D6 /* MessageInputView.swift */,
 			);
+			name = Views;
 			path = Cells;
 			sourceTree = "<group>";
 		};
@@ -412,6 +416,7 @@
 				2BBE4BBF1EBDF3EA00E9A772 /* UIView+QuickClock.swift in Sources */,
 				2B0E40AD1EBE0002001A42D6 /* String+QuickClock.swift in Sources */,
 				2BFF03BA1EBDEB470034540F /* MessagesViewController.swift in Sources */,
+				2B0E40AF1EBE004B001A42D6 /* MessageInputView.swift in Sources */,
 				14CB87E61C96F94F007376A6 /* DataModel.xcdatamodeld in Sources */,
 				143F99F61D8C5B78005D1552 /* Theme+Color.swift in Sources */,
 				144DD0941DB3B8400037C92E /* AppDelegate.swift in Sources */,

@@ -127,9 +127,9 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
             titleLabel.text = message.title
             textLabel.text = message.text
             
-            container.backgroundColor = message.didSent ? .tokenGreen : .tokenGray
-            titleLabel.textColor = message.didSent ? .tokenWhite : .tokenDarkGray
-            textLabel.textColor = message.didSent ? .tokenWhite : .tokenDarkGray
+            container.backgroundColor = message.didSent ? .quickClockGreen : .quickClockGray
+            titleLabel.textColor = message.didSent ? .quickClockWhite : .quickClockDarkGray
+            textLabel.textColor = message.didSent ? .quickClockWhite : .quickClockDarkGray
             
             if message.didSent {
                 leftWidthSmall.isActive = false

@@ -9,6 +9,7 @@
 import UIKit
 import TinyConstraints
 import BouncyLayout
+import SweetUIKit
 
 struct IndexPathSizes {
     var sizes:[IndexPath: CGSize] = [:]
@@ -27,7 +28,7 @@ class MessagesViewController: UIViewController {
     
     var sizeFor = IndexPathSizes()
     
-    lazy var messages = (0..<100).map { _ in Message.random() }
+    lazy var messages = [Message]()
     
     lazy var layout: BouncyLayout = {
         let layout = BouncyLayout()
@@ -40,8 +41,10 @@ class MessagesViewController: UIViewController {
     lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
         view.register(MessageCell.self, forCellWithReuseIdentifier: MessageCell.reuseIdentifier)
+        view.delegate = self
         view.dataSource = self
         view.backgroundColor = .white
+        (view as UIScrollView).keyboardDismissMode = .interactive
         
         return view
     }()
@@ -49,24 +52,51 @@ class MessagesViewController: UIViewController {
     lazy var dummyCell: MessageCell = {
         return MessageCell()
     }()
+    
+    lazy var textInputView: UIView = {
+        let view = MessageInputView()
+        view.delegate = self
+        view.backgroundColor = .white
+        
+        return view
+    }()
 
+
+    var textInputBottomConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "@hamsterdam"
-        
-        let margin: CGFloat = 500
+        title = "@Quick Clock"
         
         view.addSubview(collectionView)
-        collectionView.edges(to: view, insets: UIEdgeInsets(top: -margin, left: 0, bottom: margin, right: 0))
-        collectionView.contentInset = UIEdgeInsets(top: margin + 10, left: 0, bottom: margin + 10, right: 0)
-        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: margin, left: 0, bottom: margin, right: 0)
+        view.addSubview(textInputView)
+        
+        textInputView.left(to: view)
+        textInputView.right(to: view)
+        textInputBottomConstraint = textInputView.bottom(to: view)
+        textInputView.height(40.0)
+        
+        collectionView.top(to: view)
+        collectionView.left(to: view)
+        collectionView.right(to: view)
+        collectionView.bottomToTop(of: textInputView)
     }
     
     func calculateSize(for indexPath: IndexPath) -> CGSize {
-        
         dummyCell.message = messages[indexPath.item]
         return dummyCell.size(for: collectionView.bounds.width)
+    }
+}
+
+extension MessagesViewController: MessageInputViewDelegate {
+    
+    func messageInputViewDidRequireSendMessage(inputView: MessageInputView) {
+        if let text = inputView.textField.text as String? {
+            self.messages.append(Message(title: "Clock", text: text, didSent: true, image: nil))
+            collectionView.reloadData()
+            collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height)
+        }
     }
 }
 
@@ -98,5 +128,17 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout {
         
         return sizeFor[indexPath]!
     }
+}
+
+extension MessagesViewController: KeyboardAwareAccessoryViewDelegate {
+    func inputView(_ inputView: KeyboardAwareInputAccessoryView, shouldUpdatePosition keyboardOriginYDistance: CGFloat) {
+        self.textInputBottomConstraint.constant = keyboardOriginYDistance
+        self.view.layoutIfNeeded()
+    }
+    
+    override var inputAccessoryView: UIView? {
+        return self.keyboardAwareInputView
+    }
+
 }
 
