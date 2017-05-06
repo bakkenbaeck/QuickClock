@@ -2,6 +2,7 @@ import UIKit
 import TinyConstraints
 import BouncyLayout
 import SweetUIKit
+import AVFoundation
 
 struct IndexPathSizes {
     var sizes:[IndexPath: CGSize] = [:]
@@ -26,7 +27,7 @@ class MessagesViewController: UIViewController {
     lazy var scenario: Scenario = {
         let scenario = Scenario()
         scenario.delegate = self
-        
+
         return scenario
     }()
 
@@ -64,7 +65,7 @@ class MessagesViewController: UIViewController {
         
         return view
     }()
-
+    
     static let animationViewHeightConstraint: CGFloat = 30.0
     
     lazy var animationView: AnimationContainerView = {
@@ -72,7 +73,7 @@ class MessagesViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-
+    
     var textInputBottomConstraint: NSLayoutConstraint!
     var animationContainerHeightConstraint: NSLayoutConstraint!
     var animationContainerHeightConsraint: NSLayoutConstraint?
@@ -103,7 +104,7 @@ class MessagesViewController: UIViewController {
         collectionView.right(to: view)
         collectionView.bottomToTop(of: textInputView)
         
-        collectionView.contentInset = UIEdgeInsets(top: 5.0, left: 0.0, bottom: 15.0, right: 0.0)
+        collectionView.contentInset = UIEdgeInsets(top: 5.0, left: 0.0, bottom: 45.0, right: 0.0)
     }
     
     func calculateSize(for indexPath: IndexPath) -> CGSize {
@@ -147,7 +148,9 @@ extension MessagesViewController: ScenarioDelegate {
     func didResponse(on scenario: Scenario) {
         self.messages.append(Message(title: "Clocky", text: scenario.timeString, isOutgoing: false, image: nil))
         collectionView.reloadData()
-        collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height - 15.0)
+        collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height)
+        
+        AudioServicesPlaySystemSound(1054)
     }
     
     func didPause(on scenario: Scenario) {
@@ -164,6 +167,7 @@ extension MessagesViewController: ScenarioDelegate {
 
     func didDeliverMessage(on scenario: Scenario) {
        self.status = .delivered
+
     }
 }
 
@@ -173,15 +177,12 @@ extension MessagesViewController: MessageInputViewDelegate {
         if let text = inputView.textField.text as String? {
             self.messages.append(Message(title: "Y.O.U.", text: text, isOutgoing: true, image: nil))
             collectionView.reloadData()
-            
+
+            self.status = .none
             self.scenario.createScenario()
             self.scenario.executeScenario()
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.startTypingAnimation()
-            })
-            
-            collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height - 15.0)
+            collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height)
         }
     }
 }
@@ -195,11 +196,6 @@ extension MessagesViewController: UICollectionViewDataSource {
             let message = messages[indexPath.item]
             let lastMessage = indexPath.row == messages.count - 1
             cell.status = lastMessage ? self.status : .none
-
-            if self.status != .none {
-
-
-            }
 
             if !message.isOutgoing {
                 cell.status = .none
@@ -220,8 +216,6 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = calculateSize(for: indexPath)
-        print(self.status)
-        print(size)
         return size
     }
 }

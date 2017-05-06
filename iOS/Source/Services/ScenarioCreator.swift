@@ -47,10 +47,10 @@ final class Scenario {
         events.append(Event(type: .read, delay: self.randomEventDelay()))
 
         for _ in 0...Int(arc4random_uniform(2) + 1) {
+            events.append(Event(type: .pause, delay: self.randomEventDelay()))
             events.append(Event(type: .type, delay: self.randomEventDelay()))
-            events.append(Event(type: .pause, delay: 3.0))
         }
-
+        events.append(Event(type: .pause, delay: 0.1))
         events.append(Event(type: .response, delay: self.randomEventDelay()))
 
         return events
