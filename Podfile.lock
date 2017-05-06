@@ -1,0 +1,18 @@
+PODS:
+  - BouncyLayout (1.0.0)
+  - SweetUIKit (1.12.1)
+  - TinyConstraints (2.1.1)
+
+DEPENDENCIES:
+  - BouncyLayout
+  - SweetUIKit
+  - TinyConstraints
+
+SPEC CHECKSUMS:
+  BouncyLayout: b9db2f044f5d066479a4bd57ddc46a18240d0316
+  SweetUIKit: a91e9460b44950b81a39e694068ab32316ab4398
+  TinyConstraints: 4162762831c5e2001f7eefb07056db14e3dcc422
+
+PODFILE CHECKSUM: aae5d50ddfeedb6a96163720f7cfd5ac9a97f4d6
+
+COCOAPODS: 1.2.1
