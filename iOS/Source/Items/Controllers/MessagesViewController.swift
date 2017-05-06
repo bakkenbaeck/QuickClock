@@ -201,7 +201,7 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout {
 
 extension MessagesViewController: KeyboardAwareAccessoryViewDelegate {
     func inputView(_ inputView: KeyboardAwareInputAccessoryView, shouldUpdatePosition keyboardOriginYDistance: CGFloat) {
-        self.textInputBottomConstraint.constant = keyboardOriginYDistance
+        self.textInputBottomConstraint.constant = keyboardOriginYDistance - 10.0
         self.view.layoutIfNeeded()
     }
     
