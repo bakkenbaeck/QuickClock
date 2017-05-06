@@ -110,6 +110,7 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
+        
         setNeedsLayout()
         layoutIfNeeded()
     }

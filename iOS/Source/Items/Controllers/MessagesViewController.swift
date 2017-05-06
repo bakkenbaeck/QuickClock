@@ -1,11 +1,3 @@
-//
-//  MessagesViewController.swift
-//  BBMessages
-//
-//  Created by Robert-Hein Hooijmans on 01/05/2017.
-//  Copyright © 2017 Bakken & Baeck. All rights reserved.
-//
-
 import UIKit
 import TinyConstraints
 import BouncyLayout
@@ -100,6 +92,7 @@ class MessagesViewController: UIViewController {
     
     func calculateSize(for indexPath: IndexPath) -> CGSize {
         dummyCell.message = messages[indexPath.item]
+        
         return dummyCell.size(for: collectionView.bounds.width)
     }
 }
@@ -154,6 +147,5 @@ extension MessagesViewController: KeyboardAwareAccessoryViewDelegate {
     override var inputAccessoryView: UIView? {
         return self.keyboardAwareInputView
     }
-
 }
 

@@ -1,11 +1,3 @@
-//
-//  MessageInputView.swift
-//  Project
-//
-//  Created by Yuliia Veresklia on 06/05/2017.
-//
-//
-
 import Foundation
 import SweetUIKit
 
@@ -21,6 +13,7 @@ final class MessageInputView: UIView {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
+        
         return textField
     }()
     
@@ -30,6 +23,7 @@ final class MessageInputView: UIView {
         button.setTitleColor(.blue, for: .normal)
         button.setTitle("Send", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        
         return button
     }()
     
@@ -40,6 +34,11 @@ final class MessageInputView: UIView {
     
     init() {
         super.init(frame: CGRect.zero)
+        
+        addSubviewsAndConstraints()
+    }
+    
+    private func addSubviewsAndConstraints() {
         self.addSubview(textField)
         self.addSubview(sendButton)
         
