@@ -15,6 +15,8 @@ class ScenarioCreatorTests: XCTestCase {
         let expect = expectation(description: "test scenario")
 
         let scenarioCreator = Scenario()
+        scenarioCreator.delegate = self
+        
         scenarioCreator.createScenario()
 
         for event in scenarioCreator.events {
@@ -37,6 +39,8 @@ class ScenarioCreatorTests: XCTestCase {
         let expect = expectation(description: "test scenario twice")
 
         let scenarioCreator = Scenario()
+        scenarioCreator.delegate = self
+
         scenarioCreator.createScenario()
         scenarioCreator.executeScenario()
 
@@ -56,4 +60,8 @@ class ScenarioCreatorTests: XCTestCase {
         let when = DispatchTime.now() + delay
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
+}
+
+extension ScenarioCreatorTests: ScenarioDelegate {
+    
 }

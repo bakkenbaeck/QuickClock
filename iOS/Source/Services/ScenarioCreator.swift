@@ -1,6 +1,24 @@
 import Foundation
 
+protocol ScenarioDelegate: class {
+    func didResponse(on scenario: Scenario)
+    func didPause(on scenario: Scenario)
+    func didType(on scenario: Scenario)
+    func didReadMessage(on scenario: Scenario)
+    func didDeliverMessage(on scenario: Scenario)
+}
+
+extension ScenarioDelegate {
+    func didDeliverMessage(on scenario: Scenario) { print("Delivered")}
+    func didReadMessage(on scenario: Scenario) { print("Read")}
+    func didPause(on scenario: Scenario) { print("😶")}
+    func didType(on scenario: Scenario) { print("Typing ...")}
+    func didResponse(on scenario: Scenario) { print("Tell the time!")}
+}
+
 final class Scenario {
+    weak var delegate: ScenarioDelegate?
+
     var events = [Event]()
     var timer: Timer?
 
@@ -58,15 +76,15 @@ final class Scenario {
     private  func execute(event: Event) {
         switch event.type {
         case .delivered:
-            print("Message delivered")
+            self.delegate?.didDeliverMessage(on: self)
         case .read:
-            print("Message read")
+            self.delegate?.didReadMessage(on: self)
         case .type:
-            print("Typing...")
+            self.delegate?.didType(on: self)
         case .pause:
-            print("😶")
+            self.delegate?.didPause(on: self)
         case .response:
-            print("Response")
+            self.delegate?.didResponse(on: self)
         default: break
         }
 
