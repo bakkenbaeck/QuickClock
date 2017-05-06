@@ -61,7 +61,7 @@ class MessagesViewController: UIViewController {
 
     static let animationViewHeightConstraint: CGFloat = 50.0
     
-    lazy var animationView: UIView = {
+    lazy var animationView: AnimationContainerView = {
         let view = AnimationContainerView(frame: CGRect.zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -96,7 +96,7 @@ class MessagesViewController: UIViewController {
         collectionView.right(to: view)
         collectionView.bottomToTop(of: textInputView)
         
-        collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 15.0, right: 0.0)
+        collectionView.contentInset = UIEdgeInsets(top: 5.0, left: 0.0, bottom: 15.0, right: 0.0)
     }
     
     func calculateSize(for indexPath: IndexPath) -> CGSize {
@@ -106,20 +106,30 @@ class MessagesViewController: UIViewController {
     }
     
     func stopTypingAnimation() {
-        self.animationContainerHeightConsraint?.constant = 0.0
-        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
+            self.animationView.imageView.alpha = 0.0
+        }) { finished in
+            self.animationContainerHeightConsraint?.constant = 0.0
+            self.view.layoutIfNeeded()
+        }
     }
     
     func startTypingAnimation() {
+        self.animationView.imageView.alpha = 0.0
+        
         self.animationContainerHeightConsraint?.constant = MessagesViewController.animationViewHeightConstraint
         self.view.setNeedsLayout()
         self.view.layoutIfNeeded()
+        
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
+            self.animationView.imageView.alpha = 1.0
+        }, completion: nil)
     }
 }
 
 extension MessagesViewController: ScenarioDelegate {
     func didResponse(on scenario: Scenario) {
-        self.messages.append(Message(title: "Clocky", text: "No idea", didSent: false, image: nil))
+        self.messages.append(Message(title: "Clocky", text: scenario.timeString, didSent: false, image: nil))
         collectionView.reloadData()
     }
     
