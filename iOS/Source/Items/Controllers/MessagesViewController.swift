@@ -73,7 +73,7 @@ class MessagesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "@Quick Clock"
+        title = "Quick Clock"
         
         view.backgroundColor = .white
         
