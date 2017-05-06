@@ -107,10 +107,15 @@ class MessagesViewController: UIViewController {
     }
     
     func calculateSize(for indexPath: IndexPath) -> CGSize {
-        dummyCell.message = messages[indexPath.item]
+        let message = messages[indexPath.item] 
+        dummyCell.message = message
 
         let lastMessage = indexPath.row == messages.count - 1
         dummyCell.status = lastMessage ? self.status : .none
+
+        if !message.isOutgoing {
+            dummyCell.status = .none
+        }
 
         let size = dummyCell.size(for: collectionView.bounds.width)
 
@@ -140,7 +145,7 @@ class MessagesViewController: UIViewController {
 
 extension MessagesViewController: ScenarioDelegate {
     func didResponse(on scenario: Scenario) {
-        self.messages.append(Message(title: "Clocky", text: scenario.timeString, didSent: false, image: nil))
+        self.messages.append(Message(title: "Clocky", text: scenario.timeString, isOutgoing: false, image: nil))
         collectionView.reloadData()
         collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height - 15.0)
     }
@@ -154,11 +159,11 @@ extension MessagesViewController: ScenarioDelegate {
     }
     
     func didReadMessage(on scenario: Scenario) {
-    
+       self.status = .read
     }
-    
+
     func didDeliverMessage(on scenario: Scenario) {
-    
+       self.status = .delivered
     }
 }
 
@@ -166,7 +171,7 @@ extension MessagesViewController: MessageInputViewDelegate {
     
     func messageInputViewDidRequireSendMessage(inputView: MessageInputView) {
         if let text = inputView.textField.text as String? {
-            self.messages.append(Message(title: "Y.O.U.", text: text, didSent: true, image: nil))
+            self.messages.append(Message(title: "Y.O.U.", text: text, isOutgoing: true, image: nil))
             collectionView.reloadData()
             
             self.scenario.createScenario()
@@ -190,7 +195,16 @@ extension MessagesViewController: UICollectionViewDataSource {
             let message = messages[indexPath.item]
             let lastMessage = indexPath.row == messages.count - 1
             cell.status = lastMessage ? self.status : .none
-            
+
+            if self.status != .none {
+
+
+            }
+
+            if !message.isOutgoing {
+                cell.status = .none
+            }
+
             cell.message = message
         }
         
@@ -205,9 +219,10 @@ extension MessagesViewController: UICollectionViewDataSource {
 extension MessagesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        sizeFor[indexPath] = calculateSize(for: indexPath)
-
-        return sizeFor[indexPath]!
+        let size = calculateSize(for: indexPath)
+        print(self.status)
+        print(size)
+        return size
     }
 }
 

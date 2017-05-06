@@ -25,18 +25,16 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
         didSet {
             switch self.status {
             case .none:
-                statusLabelHeightConstraint.constant = 0.0
                 self.statusLabel.text = ""
             case .delivered:
                 self.statusLabel.text = "Delivered"
-                statusLabelHeightConstraint.constant = 20.0
             case .read:
-                statusLabelHeightConstraint.constant = 20.0
                 self.statusLabel.text = "Read"
             }
+
+            self.layoutIfNeeded()
         }
     }
-    var statusLabelHeightConstraint: NSLayoutConstraint!
 
     lazy var statusLabel: UILabel = {
         let statusLabel = UILabel()
@@ -105,7 +103,7 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
         textLabel.right(to: container, offset: -10)
 
         statusLabel.leftToRight(of: leftSpacing)
-        statusLabelHeightConstraint = statusLabel.height(0)
+        statusLabel.height(20)
         statusLabel.rightToLeft(of: rightSpacing)
         statusLabel.bottom(to: contentView)
     }
@@ -124,7 +122,7 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
     
     func fixCorners() {
         guard let message = message else { return }
-        let corners: UIRectCorner = message.didSent ? [.bottomLeft, .topLeft, .topRight] : [.bottomRight, .topLeft, .topRight]
+        let corners: UIRectCorner = message.isOutgoing ? [.bottomLeft, .topLeft, .topRight] : [.bottomRight, .topLeft, .topRight]
         container.roundCorners(corners, radius: 10)
     }
     
@@ -133,10 +131,10 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
             guard let message = message else { return }
             textLabel.text = message.text
             
-            container.backgroundColor = message.didSent ? .quickClockGreen : .quickClockGray
-            textLabel.textColor = message.didSent ? .quickClockWhite : .quickClockDarkGray
+            container.backgroundColor = message.isOutgoing ? .quickClockGreen : .quickClockGray
+            textLabel.textColor = message.isOutgoing ? .quickClockWhite : .quickClockDarkGray
 
-            if message.didSent {
+            if message.isOutgoing {
                 leftWidthSmall.isActive = false
                 rightWidthBig.isActive = false
                 leftWidthBig.isActive = true
@@ -162,14 +160,14 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
         
         let maxWidth: CGFloat = width - 80 - 20
 
-        var statusLabelHeight: CGFloat  = 0.0
-        switch self.status {
-        case .delivered:
-            statusLabelHeight = 20.0
-        case .read:
-            statusLabelHeight = 20.0
-        default: break
-        }
+        var statusLabelHeight: CGFloat  = 20.0
+//        switch self.status {
+//        case .delivered:
+//            statusLabelHeight = 20.0
+//        case .read:
+//            statusLabelHeight = 20.0
+//        default: break
+//        }
 
         let textHeight = message.text.height(withConstrainedWidth: maxWidth - 20, font: textFont)
         let cellHeight = ceil(textHeight + 10 + statusLabelHeight)

@@ -4,14 +4,14 @@ import UIKit
 struct Message {
     let title: String
     let text: String
-    let didSent: Bool
+    let isOutgoing: Bool
     let image: UIImage?
 }
 
 extension Message {
 
     static func random() -> Message {
-        return Message(title: randomString, text: randomString, didSent: randomBool, image: randomImage)
+        return Message(title: randomString, text: randomString, isOutgoing: randomBool, image: randomImage)
     }
     
     private static var randomBool: Bool { return arc4random_uniform(10) % 2 == 0 ? true : false }
