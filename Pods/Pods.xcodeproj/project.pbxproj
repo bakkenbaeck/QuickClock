@@ -7,82 +7,179 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A23A9BC606601020D9C96F5D7C5BC58 /* BouncyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A098B4DBCCEF040CDD85BBCFF746FA /* BouncyLayout.swift */; };
-		1B8C5B6EBA5D1854B149E3585308399C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		250266FD9C4E9E95564D68A4A41EB20A /* BouncyLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F246B80AA73839D368840A33FD586907 /* BouncyLayout-dummy.m */; };
-		3EBC0AB30C64EEFDFFC773B5B04888A0 /* BouncyLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8AEC46D60870552712A05C08211294A /* BouncyLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C2D427E41B11A907F2433ED51E55126 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4C60BA5F312EAC88DF1115EF4385F899 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40EB8664917CA3A9DC3B1A9063DA3A /* TinyConstraints.swift */; };
-		4EDD7954B7C33DA29147F8DDF0C4823F /* Pods-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7A19FCBCA24DD9EA2274DA6FA95B924 /* Pods-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		569E096882BDD5A77B4D1DF1CE26F1A4 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC83CA31D9BFCB9D451F6A5FD9E70DB0 /* Constraints.swift */; };
-		8C1BBC9465E6072B1F1C58EB97B07F42 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C20D13992CD8C496C2132FEE17BCA4 /* Stack.swift */; };
-		90BC31839886279E36E0D909A65F2383 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2517EB17E1F8748F9ECF0662A110194 /* TinyConstraints-dummy.m */; };
-		96CE2B84CFC460AB3C0AFE726FDEC16A /* Pods-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFFB79315F50DFDF6CCADEDDD8C8C9C /* Pods-iOS-dummy.m */; };
-		AA610DE415522E83492DBA3E84DDEA26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		D13122C09A5A11E973886579E2539323 /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672A93A3B8DD9A465F2ADFF52EFF1AE /* Constrainable.swift */; };
-		D807C25A560F4999B11967E65D6E1B3F /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870FB553747494EAFD84592B0BA8D1F4 /* Abstraction.swift */; };
-		DBF578045B2A19105F72F2B3BBDE761F /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77696DAF10269A736F5338EDFE9F3882 /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A23A9BC606601020D9C96F5D7C5BC58 /* BouncyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432FAAAB61027FB8AD7F110A6C3C7D7 /* BouncyLayout.swift */; };
+		0B9E533D6624EBF47F45F4249CDAA20F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		1B8C5B6EBA5D1854B149E3585308399C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		1ED476C755F223481AD177DED5E82F5B /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7B7B6B0540A71B34E941491C0542A1 /* Resources.xcassets */; };
+		209BF359B2ABC308C038189D5C203A04 /* SweetUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EEE3437F0BDCB92DE52688DA6146CF /* SweetUIKit-dummy.m */; };
+		250266FD9C4E9E95564D68A4A41EB20A /* BouncyLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3674BCBDC240A5067EB3EE83A46C9B86 /* BouncyLayout-dummy.m */; };
+		320912485CB803CBBEEAA92AE5C806CC /* KeyboardAwareInputViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CD4C4B217E5459BB8C49FF6283C16E /* KeyboardAwareInputViewProtocol.swift */; };
+		3694D627B9D791FD574B5C43C4CAD8CC /* OpenInSafariActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5D319E5C605D8FD96AA71FC42953C6E /* OpenInSafariActivity.strings */; };
+		3D0D38B520682FF3809CC35D6DE2A3FD /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17FDA45AAFF2F5732010FF75983AFC /* Identifiable.swift */; };
+		3E53C549B42CDA39FA0ACFD176CE9B13 /* UIAlertController+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D202136F21156AA636579F6499A6B /* UIAlertController+Sweet.swift */; };
+		3E763F4AFFC462404D819372BC0BB355 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		3EBC0AB30C64EEFDFFC773B5B04888A0 /* BouncyLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23EED425117C6ADCA5E2F9665CA4D826 /* BouncyLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		454BD12A84CD5AFDF5F13DDEE0705BEF /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC07DDA14EDBD4B972562C7AE03928 /* Constrainable.swift */; };
+		458D2717B87F4572D67FD07C26F8DF84 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 827EC8581B69738E74BB53569AB88F02 /* TinyConstraints-dummy.m */; };
+		488643F5B34D12A6B8A4FB7C34BEAECD /* UICollectionView+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0DCA35D559F0D1C9B02347AA9E43C /* UICollectionView+Sweet.swift */; };
+		4895E0FA646F2BF5A4EFD77CB1D23ADF /* SweetUIKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1B444D54AC396BB3C895CCDFBFD58F5 /* SweetUIKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51928C77F0392B0946E15CC3478D40FD /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 515A60D4F18D174FAD40CCF14A2104DC /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		555BD8D2FE125D031ECA269217ACA7C9 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB785D334E1355E1B4921FB20493A01 /* TinyConstraints.swift */; };
+		56AF998ECC0CB184FE83FD4BC88E174D /* UIScrollView+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14516EE85258053DA0D112864018429B /* UIScrollView+Sweet.swift */; };
+		5C6AA042A9290DAFB6CF8D8C8D5E711B /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F1F6CE8CA127CE76CC3F62285EA216 /* Abstraction.swift */; };
+		689DD46E4F006EDD25254304C3533B45 /* String+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094491092BF4CFA267D8AB2ECCB4E14B /* String+Sweet.swift */; };
+		718D7A1FBC9A1F4DF3FB544188A0F00B /* UILabel+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB93EB07986B9A5BE5CE7653D5226C4C /* UILabel+Sweet.swift */; };
+		81A0B7E7DA736240D2E6899C239FE1F6 /* SearchableCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B283C3CFF64D00D7D5534C1F4D67F /* SearchableCollectionController.swift */; };
+		81D19610B7C34C90A8EF47C7BBA12118 /* UIColor+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EF714B3C45426503B82C3AC3C1C02 /* UIColor+Sweet.swift */; };
+		86A0700FD677D7143F14BAEFBA5822F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		903701CD5099CB4BC7F96FD20C33CF2F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A7CA461197FE614A6020C482F0E50 /* Stack.swift */; };
+		9346EAE4C50452EB76AC4C6D17636CF4 /* UITableView+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FB349A4EE15EB232AED6006066A84C /* UITableView+Sweet.swift */; };
+		99A85D22F3889D3B8640D909F60595A2 /* SweetCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FB959231D10E6FE4311E8163B5911 /* SweetCollectionController.swift */; };
+		9C82B100E68A778F6B7936760A35E959 /* OpenInSafariActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C989E58138BFCF0803BCE258C4C61B /* OpenInSafariActivity.swift */; };
+		9D55D7F7027DC127B370F7D2420EA0BE /* OpenInSafariActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5D319E5C605D8FD96AA71FC42953C6E /* OpenInSafariActivity.strings */; };
+		A01D3EF4141DD359068A0E925D0C4EAD /* UIImage+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC7C48C0AA4EDBDCE7FB2DC374F77F /* UIImage+Sweet.swift */; };
+		AB3A66BAEFC7C5BF62C89DE441AF29AD /* SweetTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B281CD2BF45C991679B0E5795C82BF40 /* SweetTableController.swift */; };
+		AC65EB5D67EA3ED9225FE1694BABBD01 /* Jiggly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37949164E974F2CD90CACA9D41CA501 /* Jiggly.swift */; };
+		ADE7E8A4F581F73DD7E1FD830A265598 /* SweetUIKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A349AE8D0DD796CF7279082FB26393B1 /* SweetUIKitResources.bundle */; };
+		B6A84A1F154A9CB2DBE8D4AFBD7DB8E6 /* UIViewController+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E043550127DD75388BD2835615AE3 /* UIViewController+Sweet.swift */; };
+		CD90CAF56BD172D8B505E019BD0C1026 /* IndexPath+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652910DBB714CE3B5DD4E12BC524E2B9 /* IndexPath+Sweet.swift */; };
+		D354487E5689D76F96ED9F61C1CEC0F2 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF842ACA61968D912B6509D8EE85185F /* Constraints.swift */; };
+		D8A28B923549EB11E042B302D4BFCAE9 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7B7B6B0540A71B34E941491C0542A1 /* Resources.xcassets */; };
+		E17F4BDA7ED23191D5BAD753977D8C56 /* Pods-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7A19FCBCA24DD9EA2274DA6FA95B924 /* Pods-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41B22C482D23B115C4370944337645F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		F2849A578007DDAEF41A0F2506897AD7 /* UIView+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08172DA617C1D4EB928B56947E8F499 /* UIView+Sweet.swift */; };
+		F75C1560D3C4D647FEE4AEE0D92521AF /* UILocalNotification+Sweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC12AD0FF4CC621BD68E45931B50F0D /* UILocalNotification+Sweet.swift */; };
+		F942A1655B8B8B22E48AD0A0BAB24184 /* Pods-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFFB79315F50DFDF6CCADEDDD8C8C9C /* Pods-iOS-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		310D4E2FF3B6A66ECE2847DF9FE0A69F /* PBXContainerItemProxy */ = {
+		37ACC21E048C6E83E9F5F910AA467E31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05A50C4187BBE8BB97FBEC4F0E86810D;
+			remoteInfo = "SweetUIKit-SweetUIKitResources";
+		};
+		3AB442E801112891652A3BF440D0BAD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC0E9E75C549E84967152B018BE9A66A;
+			remoteInfo = TinyConstraints;
+		};
+		9F205419AAC2AE4C79F732F22F6CC83C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 596E2BF0D45B6D6BBF2898BEBD5295DD;
 			remoteInfo = BouncyLayout;
 		};
-		B9B830C999B310E20B5662D94BBBE24D /* PBXContainerItemProxy */ = {
+		C886CF0854AD659511D8467DDA557B72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 973CE9202578D4B5ABF114A8CFA08E8F;
-			remoteInfo = TinyConstraints;
+			remoteGlobalIDString = 8B600C5FD6A9E4897F9AFAE4E19EB909;
+			remoteInfo = SweetUIKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		046B8478476FAEA2BD421B1E192F6777 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		056427DE2559BE41E11A21581CC4327F /* SweetUIKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SweetUIKit.modulemap; sourceTree = "<group>"; };
+		094491092BF4CFA267D8AB2ECCB4E14B /* String+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Sweet.swift"; path = "Sources/String+Sweet.swift"; sourceTree = "<group>"; };
+		0CA728A2C1E42C7DF08D6306C7515BAC /* BouncyLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BouncyLayout-prefix.pch"; sourceTree = "<group>"; };
 		0F3C5DD11BFC156AEB129A8427F1BCFF /* Pods-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		1BEBBF30328A669D0E150E9A812AD42E /* BouncyLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BouncyLayout.modulemap; sourceTree = "<group>"; };
-		20430DE490F01344A084DD8F16555E60 /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
-		21E776D0C68CA7060A592DB0D5AD3C91 /* BouncyLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BouncyLayout-prefix.pch"; sourceTree = "<group>"; };
+		14516EE85258053DA0D112864018429B /* UIScrollView+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Sweet.swift"; path = "Sources/UIScrollView+Sweet.swift"; sourceTree = "<group>"; };
+		1E17FDA45AAFF2F5732010FF75983AFC /* Identifiable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Identifiable.swift; path = Sources/Identifiable.swift; sourceTree = "<group>"; };
+		23EED425117C6ADCA5E2F9665CA4D826 /* BouncyLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BouncyLayout-umbrella.h"; sourceTree = "<group>"; };
+		2A4D202136F21156AA636579F6499A6B /* UIAlertController+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Sweet.swift"; path = "Sources/UIAlertController+Sweet.swift"; sourceTree = "<group>"; };
+		32FB349A4EE15EB232AED6006066A84C /* UITableView+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Sweet.swift"; path = "Sources/UITableView+Sweet.swift"; sourceTree = "<group>"; };
+		3674BCBDC240A5067EB3EE83A46C9B86 /* BouncyLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BouncyLayout-dummy.m"; sourceTree = "<group>"; };
 		36F95EB5D1C6782BC1C8802B87020629 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B40EB8664917CA3A9DC3B1A9063DA3A /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
-		6310069B4B7C1B72FF3E30392919C725 /* TinyConstraints.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.xcconfig; sourceTree = "<group>"; };
-		634C473DEBEAF0A93BE35F217F32E256 /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
-		65C20D13992CD8C496C2132FEE17BCA4 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		40DD710DF61E6276D2905E6914AA976A /* BouncyLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BouncyLayout.xcconfig; sourceTree = "<group>"; };
+		515A60D4F18D174FAD40CCF14A2104DC /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
+		545392B00C8976622B6E425B1D27CCBA /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TinyConstraints.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54EEE3437F0BDCB92DE52688DA6146CF /* SweetUIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SweetUIKit-dummy.m"; sourceTree = "<group>"; };
+		55C989E58138BFCF0803BCE258C4C61B /* OpenInSafariActivity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenInSafariActivity.swift; path = Sources/OpenInSafariActivity.swift; sourceTree = "<group>"; };
+		585FB959231D10E6FE4311E8163B5911 /* SweetCollectionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SweetCollectionController.swift; path = Sources/SweetCollectionController.swift; sourceTree = "<group>"; };
+		5AC12AD0FF4CC621BD68E45931B50F0D /* UILocalNotification+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILocalNotification+Sweet.swift"; path = "Sources/UILocalNotification+Sweet.swift"; sourceTree = "<group>"; };
+		5D9E043550127DD75388BD2835615AE3 /* UIViewController+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Sweet.swift"; path = "Sources/UIViewController+Sweet.swift"; sourceTree = "<group>"; };
+		652910DBB714CE3B5DD4E12BC524E2B9 /* IndexPath+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IndexPath+Sweet.swift"; path = "Sources/IndexPath+Sweet.swift"; sourceTree = "<group>"; };
+		6EEF6E4E00CAD80D737C8094DEC1D05A /* SweetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SweetUIKit.framework; path = SweetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F653571C9BBF67D069D4F9B02EF884D /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		75234299E60DEC5DC40442EDB71DEF2B /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		77696DAF10269A736F5338EDFE9F3882 /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
+		7EAC859BB7433F8B7E20E8AB5C5FD5BE /* BouncyLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BouncyLayout.framework; path = BouncyLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		823A293FCAFDBC39B80646A61EB6859A /* Pods-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-iOS.modulemap"; sourceTree = "<group>"; };
-		870FB553747494EAFD84592B0BA8D1F4 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
-		88069FE57896DB8D30FCFE5CA12FAD49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AB6F9593B80E894F790AE162E2630DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		827EC8581B69738E74BB53569AB88F02 /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
+		854F79C604DAA41CE81DB8260BA9F94A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		889EF714B3C45426503B82C3AC3C1C02 /* UIColor+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Sweet.swift"; path = "Sources/UIColor+Sweet.swift"; sourceTree = "<group>"; };
+		88CC7C48C0AA4EDBDCE7FB2DC374F77F /* UIImage+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Sweet.swift"; path = "Sources/UIImage+Sweet.swift"; sourceTree = "<group>"; };
+		8BAC07DDA14EDBD4B972562C7AE03928 /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9672A93A3B8DD9A465F2ADFF52EFF1AE /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
+		98D7A5A70BC736F6769273A184E48999 /* BouncyLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BouncyLayout.modulemap; sourceTree = "<group>"; };
+		9EE0DCA35D559F0D1C9B02347AA9E43C /* UICollectionView+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Sweet.swift"; path = "Sources/UICollectionView+Sweet.swift"; sourceTree = "<group>"; };
 		9FFDD63DF93A089A8CE3493F357A7B7B /* Pods-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		ACCED40171949E1107F8DE15739653AD /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TinyConstraints.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2517EB17E1F8748F9ECF0662A110194 /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
+		A349AE8D0DD796CF7279082FB26393B1 /* SweetUIKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SweetUIKitResources.bundle; path = SweetUIKitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B15B36FC05F3C1C3A7D57E7560E83810 /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
+		B281CD2BF45C991679B0E5795C82BF40 /* SweetTableController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SweetTableController.swift; path = Sources/SweetTableController.swift; sourceTree = "<group>"; };
+		B4298B2720762BFD8EBDBECDE5222B4F /* SweetUIKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SweetUIKit.xcconfig; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BABE231086DA6EAF2EF52F0F53CB063C /* SweetUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SweetUIKit-prefix.pch"; sourceTree = "<group>"; };
 		C1FA4482A50A557D6320FECE49A27168 /* Pods-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-resources.sh"; sourceTree = "<group>"; };
-		C9252CA1010DC7318740CA18AE4C01C0 /* BouncyLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BouncyLayout.xcconfig; sourceTree = "<group>"; };
+		C37949164E974F2CD90CACA9D41CA501 /* Jiggly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Jiggly.swift; path = Sources/Jiggly.swift; sourceTree = "<group>"; };
+		C8F1F6CE8CA127CE76CC3F62285EA216 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
+		CADDB59F55B3F32956F3494E8545C647 /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iOS.framework; path = "Pods-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7B7B6B0540A71B34E941491C0542A1 /* Resources.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Resources.xcassets; path = Resources/Resources.xcassets; sourceTree = "<group>"; };
+		CB93EB07986B9A5BE5CE7653D5226C4C /* UILabel+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Sweet.swift"; path = "Sources/UILabel+Sweet.swift"; sourceTree = "<group>"; };
 		CDFFB79315F50DFDF6CCADEDDD8C8C9C /* Pods-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOS-dummy.m"; sourceTree = "<group>"; };
+		D08172DA617C1D4EB928B56947E8F499 /* UIView+Sweet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Sweet.swift"; path = "Sources/UIView+Sweet.swift"; sourceTree = "<group>"; };
 		D1A4C24E05EFE417E2CCB1933575196D /* Pods-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		E4A098B4DBCCEF040CDD85BBCFF746FA /* BouncyLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BouncyLayout.swift; path = BouncyLayout/Classes/BouncyLayout.swift; sourceTree = "<group>"; };
-		E8AEC46D60870552712A05C08211294A /* BouncyLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BouncyLayout-umbrella.h"; sourceTree = "<group>"; };
-		F1B45E309A01C4BF8BEF203AD2A24B0C /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iOS.framework; path = "Pods-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F246B80AA73839D368840A33FD586907 /* BouncyLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BouncyLayout-dummy.m"; sourceTree = "<group>"; };
+		D4CD4C4B217E5459BB8C49FF6283C16E /* KeyboardAwareInputViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardAwareInputViewProtocol.swift; path = Sources/KeyboardAwareInputViewProtocol.swift; sourceTree = "<group>"; };
+		D7C36852742477986ACD03B393F61B1F /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DA6B283C3CFF64D00D7D5534C1F4D67F /* SearchableCollectionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchableCollectionController.swift; path = Sources/SearchableCollectionController.swift; sourceTree = "<group>"; };
+		DF842ACA61968D912B6509D8EE85185F /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
+		E1B444D54AC396BB3C895CCDFBFD58F5 /* SweetUIKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SweetUIKit-umbrella.h"; sourceTree = "<group>"; };
+		EB7D744D871F3897EC69CF9A7AC40501 /* ResourceBundle-SweetUIKitResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SweetUIKitResources-Info.plist"; sourceTree = "<group>"; };
+		F1003C8AAE198728772B7A77CAD45120 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F432FAAAB61027FB8AD7F110A6C3C7D7 /* BouncyLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BouncyLayout.swift; path = BouncyLayout/Classes/BouncyLayout.swift; sourceTree = "<group>"; };
+		F6C375045D337497A1EAEEBD548B93A7 /* TinyConstraints.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.xcconfig; sourceTree = "<group>"; };
 		F7A19FCBCA24DD9EA2274DA6FA95B924 /* Pods-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOS-umbrella.h"; sourceTree = "<group>"; };
-		F8D38EBCE59AF6DFD1E65FB06CC6A17E /* BouncyLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BouncyLayout.framework; path = BouncyLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC83CA31D9BFCB9D451F6A5FD9E70DB0 /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
+		FA7A7CA461197FE614A6020C482F0E50 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
+		FEB785D334E1355E1B4921FB20493A01 /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
+		FF3016C680274B2CA8380E89DB8E6650 /* OpenInSafariActivity.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = OpenInSafariActivity.strings; path = en.lproj/OpenInSafariActivity.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00415D1E1CA8643F2A8B841E956EFB7A /* Frameworks */ = {
+		35703A65A520B1E6536F90078EDC4521 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2D427E41B11A907F2433ED51E55126 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3913C257B6262D03DF9B96FA1A218927 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B9E533D6624EBF47F45F4249CDAA20F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B4A5D633C4D003C492A8ACD8B91BAD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E763F4AFFC462404D819372BC0BB355 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC9752023D83CDDDA0A71D0C78546EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E41B22C482D23B115C4370944337645F /* Foundation.framework in Frameworks */,
+				86A0700FD677D7143F14BAEFBA5822F3 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,25 +191,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFBF2D12771A7CBF47F114EA5F3D46CC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA610DE415522E83492DBA3E84DDEA26 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33ED999BE0D4B16B8F96E8EBC004F327 /* Products */ = {
+		044A42EB3D540F1AD12B7B1EA56E855B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F8D38EBCE59AF6DFD1E65FB06CC6A17E /* BouncyLayout.framework */,
-				F1B45E309A01C4BF8BEF203AD2A24B0C /* Pods_iOS.framework */,
-				ACCED40171949E1107F8DE15739653AD /* TinyConstraints.framework */,
+				B5D319E5C605D8FD96AA71FC42953C6E /* OpenInSafariActivity.strings */,
+				CB7B7B6B0540A71B34E941491C0542A1 /* Resources.xcassets */,
 			);
-			name = Products;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0FD27A66414F13BE169C4D8706056E81 /* TinyConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				C8F1F6CE8CA127CE76CC3F62285EA216 /* Abstraction.swift */,
+				8BAC07DDA14EDBD4B972562C7AE03928 /* Constrainable.swift */,
+				DF842ACA61968D912B6509D8EE85185F /* Constraints.swift */,
+				FA7A7CA461197FE614A6020C482F0E50 /* Stack.swift */,
+				FEB785D334E1355E1B4921FB20493A01 /* TinyConstraints.swift */,
+				649DD3699A55728A9973C8F8232E0041 /* Support Files */,
+			);
+			name = TinyConstraints;
+			path = TinyConstraints;
+			sourceTree = "<group>";
+		};
+		429155650F80D03C8231B5FA3A79F508 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				98D7A5A70BC736F6769273A184E48999 /* BouncyLayout.modulemap */,
+				40DD710DF61E6276D2905E6914AA976A /* BouncyLayout.xcconfig */,
+				3674BCBDC240A5067EB3EE83A46C9B86 /* BouncyLayout-dummy.m */,
+				0CA728A2C1E42C7DF08D6306C7515BAC /* BouncyLayout-prefix.pch */,
+				23EED425117C6ADCA5E2F9665CA4D826 /* BouncyLayout-umbrella.h */,
+				046B8478476FAEA2BD421B1E192F6777 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BouncyLayout";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4600DAAAFEEF04AA38B6003C534E57F3 /* BouncyLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F432FAAAB61027FB8AD7F110A6C3C7D7 /* BouncyLayout.swift */,
+				429155650F80D03C8231B5FA3A79F508 /* Support Files */,
+			);
+			name = BouncyLayout;
+			path = BouncyLayout;
 			sourceTree = "<group>";
 		};
 		4F73946104FDB1436D749F187DE52D75 /* Pods-iOS */ = {
@@ -133,34 +276,70 @@
 			path = "Target Support Files/Pods-iOS";
 			sourceTree = "<group>";
 		};
+		649DD3699A55728A9973C8F8232E0041 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1003C8AAE198728772B7A77CAD45120 /* Info.plist */,
+				D7C36852742477986ACD03B393F61B1F /* TinyConstraints.modulemap */,
+				F6C375045D337497A1EAEEBD548B93A7 /* TinyConstraints.xcconfig */,
+				827EC8581B69738E74BB53569AB88F02 /* TinyConstraints-dummy.m */,
+				B15B36FC05F3C1C3A7D57E7560E83810 /* TinyConstraints-prefix.pch */,
+				515A60D4F18D174FAD40CCF14A2104DC /* TinyConstraints-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TinyConstraints";
+			sourceTree = "<group>";
+		};
+		6BC3011686A8B5E9DA58E5BFB47B8C00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EAC859BB7433F8B7E20E8AB5C5FD5BE /* BouncyLayout.framework */,
+				CADDB59F55B3F32956F3494E8545C647 /* Pods_iOS.framework */,
+				6EEF6E4E00CAD80D737C8094DEC1D05A /* SweetUIKit.framework */,
+				A349AE8D0DD796CF7279082FB26393B1 /* SweetUIKitResources.bundle */,
+				545392B00C8976622B6E425B1D27CCBA /* TinyConstraints.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		772645F4C94646DA735D6AEC681C1816 /* SweetUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1E17FDA45AAFF2F5732010FF75983AFC /* Identifiable.swift */,
+				652910DBB714CE3B5DD4E12BC524E2B9 /* IndexPath+Sweet.swift */,
+				C37949164E974F2CD90CACA9D41CA501 /* Jiggly.swift */,
+				D4CD4C4B217E5459BB8C49FF6283C16E /* KeyboardAwareInputViewProtocol.swift */,
+				55C989E58138BFCF0803BCE258C4C61B /* OpenInSafariActivity.swift */,
+				DA6B283C3CFF64D00D7D5534C1F4D67F /* SearchableCollectionController.swift */,
+				094491092BF4CFA267D8AB2ECCB4E14B /* String+Sweet.swift */,
+				585FB959231D10E6FE4311E8163B5911 /* SweetCollectionController.swift */,
+				B281CD2BF45C991679B0E5795C82BF40 /* SweetTableController.swift */,
+				2A4D202136F21156AA636579F6499A6B /* UIAlertController+Sweet.swift */,
+				9EE0DCA35D559F0D1C9B02347AA9E43C /* UICollectionView+Sweet.swift */,
+				889EF714B3C45426503B82C3AC3C1C02 /* UIColor+Sweet.swift */,
+				88CC7C48C0AA4EDBDCE7FB2DC374F77F /* UIImage+Sweet.swift */,
+				CB93EB07986B9A5BE5CE7653D5226C4C /* UILabel+Sweet.swift */,
+				5AC12AD0FF4CC621BD68E45931B50F0D /* UILocalNotification+Sweet.swift */,
+				14516EE85258053DA0D112864018429B /* UIScrollView+Sweet.swift */,
+				32FB349A4EE15EB232AED6006066A84C /* UITableView+Sweet.swift */,
+				D08172DA617C1D4EB928B56947E8F499 /* UIView+Sweet.swift */,
+				5D9E043550127DD75388BD2835615AE3 /* UIViewController+Sweet.swift */,
+				044A42EB3D540F1AD12B7B1EA56E855B /* Resources */,
+				FD79B49C72E020BB7C8974523A746220 /* Support Files */,
+			);
+			name = SweetUIKit;
+			path = SweetUIKit;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				9C97ADB77C2AC032233E603EA9552476 /* Pods */,
-				33ED999BE0D4B16B8F96E8EBC004F327 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				C3EF32FF3C21000DD8584DE80A4820B0 /* Pods */,
+				6BC3011686A8B5E9DA58E5BFB47B8C00 /* Products */,
 				A499F2438739C6A8E57ACFCEF0D75DFF /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		96F3BCA049EADEFB1B32EFB945E2AB65 /* BouncyLayout */ = {
-			isa = PBXGroup;
-			children = (
-				E4A098B4DBCCEF040CDD85BBCFF746FA /* BouncyLayout.swift */,
-				DD6DEB24B66C92396D6591ED5DE92285 /* Support Files */,
-			);
-			name = BouncyLayout;
-			path = BouncyLayout;
-			sourceTree = "<group>";
-		};
-		9C97ADB77C2AC032233E603EA9552476 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				96F3BCA049EADEFB1B32EFB945E2AB65 /* BouncyLayout */,
-				CDE88DF5366254507B1EA0175483E64E /* TinyConstraints */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		A499F2438739C6A8E57ACFCEF0D75DFF /* Targets Support Files */ = {
@@ -171,67 +350,58 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C3EF32FF3C21000DD8584DE80A4820B0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				4600DAAAFEEF04AA38B6003C534E57F3 /* BouncyLayout */,
+				772645F4C94646DA735D6AEC681C1816 /* SweetUIKit */,
+				0FD27A66414F13BE169C4D8706056E81 /* TinyConstraints */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		CDE88DF5366254507B1EA0175483E64E /* TinyConstraints */ = {
+		FD79B49C72E020BB7C8974523A746220 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				870FB553747494EAFD84592B0BA8D1F4 /* Abstraction.swift */,
-				9672A93A3B8DD9A465F2ADFF52EFF1AE /* Constrainable.swift */,
-				FC83CA31D9BFCB9D451F6A5FD9E70DB0 /* Constraints.swift */,
-				65C20D13992CD8C496C2132FEE17BCA4 /* Stack.swift */,
-				5B40EB8664917CA3A9DC3B1A9063DA3A /* TinyConstraints.swift */,
-				F764FE637F262A880BB47C09891BB7E4 /* Support Files */,
-			);
-			name = TinyConstraints;
-			path = TinyConstraints;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		DD6DEB24B66C92396D6591ED5DE92285 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1BEBBF30328A669D0E150E9A812AD42E /* BouncyLayout.modulemap */,
-				C9252CA1010DC7318740CA18AE4C01C0 /* BouncyLayout.xcconfig */,
-				F246B80AA73839D368840A33FD586907 /* BouncyLayout-dummy.m */,
-				21E776D0C68CA7060A592DB0D5AD3C91 /* BouncyLayout-prefix.pch */,
-				E8AEC46D60870552712A05C08211294A /* BouncyLayout-umbrella.h */,
-				88069FE57896DB8D30FCFE5CA12FAD49 /* Info.plist */,
+				854F79C604DAA41CE81DB8260BA9F94A /* Info.plist */,
+				EB7D744D871F3897EC69CF9A7AC40501 /* ResourceBundle-SweetUIKitResources-Info.plist */,
+				056427DE2559BE41E11A21581CC4327F /* SweetUIKit.modulemap */,
+				B4298B2720762BFD8EBDBECDE5222B4F /* SweetUIKit.xcconfig */,
+				54EEE3437F0BDCB92DE52688DA6146CF /* SweetUIKit-dummy.m */,
+				BABE231086DA6EAF2EF52F0F53CB063C /* SweetUIKit-prefix.pch */,
+				E1B444D54AC396BB3C895CCDFBFD58F5 /* SweetUIKit-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/BouncyLayout";
-			sourceTree = "<group>";
-		};
-		F764FE637F262A880BB47C09891BB7E4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8AB6F9593B80E894F790AE162E2630DC /* Info.plist */,
-				20430DE490F01344A084DD8F16555E60 /* TinyConstraints.modulemap */,
-				6310069B4B7C1B72FF3E30392919C725 /* TinyConstraints.xcconfig */,
-				B2517EB17E1F8748F9ECF0662A110194 /* TinyConstraints-dummy.m */,
-				634C473DEBEAF0A93BE35F217F32E256 /* TinyConstraints-prefix.pch */,
-				77696DAF10269A736F5338EDFE9F3882 /* TinyConstraints-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TinyConstraints";
+			path = "../Target Support Files/SweetUIKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		61DEE8D1183DC0FB24760756AED76915 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E17F4BDA7ED23191D5BAD753977D8C56 /* Pods-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA6FEED0C873A8AB5F73F0017E6C20B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51928C77F0392B0946E15CC3478D40FD /* TinyConstraints-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C8984CC854EF7D678274E239C62CCF9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4895E0FA646F2BF5A4EFD77CB1D23ADF /* SweetUIKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8CCC6A0D8460BA5764038B9A46A8C5B3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,25 +410,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0E32D987A4515DFF245501B1C9F7AF5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4EDD7954B7C33DA29147F8DDF0C4823F /* Pods-iOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA47EB594BDB8E790C231BCE22F036A4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DBF578045B2A19105F72F2B3BBDE761F /* TinyConstraints-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		05A50C4187BBE8BB97FBEC4F0E86810D /* SweetUIKit-SweetUIKitResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 316DCD041FB33395065CC10B41DC1701 /* Build configuration list for PBXNativeTarget "SweetUIKit-SweetUIKitResources" */;
+			buildPhases = (
+				0431FD03495FC0DEDA378DBEDED30FE6 /* Sources */,
+				35703A65A520B1E6536F90078EDC4521 /* Frameworks */,
+				3054A7622C9A5B519E54001FF9D4A4E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SweetUIKit-SweetUIKitResources";
+			productName = "SweetUIKit-SweetUIKitResources";
+			productReference = A349AE8D0DD796CF7279082FB26393B1 /* SweetUIKitResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		596E2BF0D45B6D6BBF2898BEBD5295DD /* BouncyLayout */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8318DDCE02F4569269BAD864761D0BBC /* Build configuration list for PBXNativeTarget "BouncyLayout" */;
@@ -273,16 +444,55 @@
 			);
 			name = BouncyLayout;
 			productName = BouncyLayout;
-			productReference = F8D38EBCE59AF6DFD1E65FB06CC6A17E /* BouncyLayout.framework */;
+			productReference = 7EAC859BB7433F8B7E20E8AB5C5FD5BE /* BouncyLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		973CE9202578D4B5ABF114A8CFA08E8F /* TinyConstraints */ = {
+		8B600C5FD6A9E4897F9AFAE4E19EB909 /* SweetUIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF6FC4FC2A1D65B3172C513AAF129A5A /* Build configuration list for PBXNativeTarget "TinyConstraints" */;
+			buildConfigurationList = F716410AADF26B7AE6BB78AB02115135 /* Build configuration list for PBXNativeTarget "SweetUIKit" */;
 			buildPhases = (
-				457825365384323CA17B9CC3EBD02A63 /* Sources */,
-				00415D1E1CA8643F2A8B841E956EFB7A /* Frameworks */,
-				CA47EB594BDB8E790C231BCE22F036A4 /* Headers */,
+				A1F265A7DBDA877ABDB77EAFA1D6DB53 /* Sources */,
+				8AC9752023D83CDDDA0A71D0C78546EC /* Frameworks */,
+				0F2ED8C7F6D97D7A8D5924907DC04CB9 /* Resources */,
+				8C8984CC854EF7D678274E239C62CCF9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDAEDC057BF8A86CED9402236CBB8FE8 /* PBXTargetDependency */,
+			);
+			name = SweetUIKit;
+			productName = SweetUIKit;
+			productReference = 6EEF6E4E00CAD80D737C8094DEC1D05A /* SweetUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		93B3D367B310082FFC3232880CF0E8B4 /* Pods-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C087998B8D54B14BDFB9094740B888E /* Build configuration list for PBXNativeTarget "Pods-iOS" */;
+			buildPhases = (
+				996BC841C18DA8E523477B693C6EBC9E /* Sources */,
+				3913C257B6262D03DF9B96FA1A218927 /* Frameworks */,
+				61DEE8D1183DC0FB24760756AED76915 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF870BF4C7E002FD052C4E80201DCC3F /* PBXTargetDependency */,
+				8A907EE9721743B6C030BD9CD466B166 /* PBXTargetDependency */,
+				463810EDD31DAD1A857A4D1423561459 /* PBXTargetDependency */,
+			);
+			name = "Pods-iOS";
+			productName = "Pods-iOS";
+			productReference = CADDB59F55B3F32956F3494E8545C647 /* Pods_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BC0E9E75C549E84967152B018BE9A66A /* TinyConstraints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0090642E8BC5F3130E58D808F180E449 /* Build configuration list for PBXNativeTarget "TinyConstraints" */;
+			buildPhases = (
+				AC802FC8F6F5DFB4E92FD66D1F7C5B14 /* Sources */,
+				7B4A5D633C4D003C492A8ACD8B91BAD8 /* Frameworks */,
+				6FA6FEED0C873A8AB5F73F0017E6C20B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -290,26 +500,7 @@
 			);
 			name = TinyConstraints;
 			productName = TinyConstraints;
-			productReference = ACCED40171949E1107F8DE15739653AD /* TinyConstraints.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F627219FE00CB6A2415F35E04B7A887C /* Pods-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA20190D6FFD39939E2CC1324ED21EC0 /* Build configuration list for PBXNativeTarget "Pods-iOS" */;
-			buildPhases = (
-				A3650144205A3DCACA92049750080F85 /* Sources */,
-				BFBF2D12771A7CBF47F114EA5F3D46CC /* Frameworks */,
-				A0E32D987A4515DFF245501B1C9F7AF5 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				657A252F3E18D96642461D165E11A99C /* PBXTargetDependency */,
-				54E56AA0C6E3C0CBDA554B1DEF0F9B11 /* PBXTargetDependency */,
-			);
-			name = "Pods-iOS";
-			productName = "Pods-iOS";
-			productReference = F1B45E309A01C4BF8BEF203AD2A24B0C /* Pods_iOS.framework */;
+			productReference = 545392B00C8976622B6E425B1D27CCBA /* TinyConstraints.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -329,28 +520,46 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 33ED999BE0D4B16B8F96E8EBC004F327 /* Products */;
+			productRefGroup = 6BC3011686A8B5E9DA58E5BFB47B8C00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				596E2BF0D45B6D6BBF2898BEBD5295DD /* BouncyLayout */,
-				F627219FE00CB6A2415F35E04B7A887C /* Pods-iOS */,
-				973CE9202578D4B5ABF114A8CFA08E8F /* TinyConstraints */,
+				93B3D367B310082FFC3232880CF0E8B4 /* Pods-iOS */,
+				8B600C5FD6A9E4897F9AFAE4E19EB909 /* SweetUIKit */,
+				05A50C4187BBE8BB97FBEC4F0E86810D /* SweetUIKit-SweetUIKitResources */,
+				BC0E9E75C549E84967152B018BE9A66A /* TinyConstraints */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		0F2ED8C7F6D97D7A8D5924907DC04CB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D55D7F7027DC127B370F7D2420EA0BE /* OpenInSafariActivity.strings in Resources */,
+				D8A28B923549EB11E042B302D4BFCAE9 /* Resources.xcassets in Resources */,
+				ADE7E8A4F581F73DD7E1FD830A265598 /* SweetUIKitResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3054A7622C9A5B519E54001FF9D4A4E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3694D627B9D791FD574B5C43C4CAD8CC /* OpenInSafariActivity.strings in Resources */,
+				1ED476C755F223481AD177DED5E82F5B /* Resources.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		457825365384323CA17B9CC3EBD02A63 /* Sources */ = {
+		0431FD03495FC0DEDA378DBEDED30FE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D807C25A560F4999B11967E65D6E1B3F /* Abstraction.swift in Sources */,
-				D13122C09A5A11E973886579E2539323 /* Constrainable.swift in Sources */,
-				569E096882BDD5A77B4D1DF1CE26F1A4 /* Constraints.swift in Sources */,
-				8C1BBC9465E6072B1F1C58EB97B07F42 /* Stack.swift in Sources */,
-				90BC31839886279E36E0D909A65F2383 /* TinyConstraints-dummy.m in Sources */,
-				4C60BA5F312EAC88DF1115EF4385F899 /* TinyConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,35 +572,168 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3650144205A3DCACA92049750080F85 /* Sources */ = {
+		996BC841C18DA8E523477B693C6EBC9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96CE2B84CFC460AB3C0AFE726FDEC16A /* Pods-iOS-dummy.m in Sources */,
+				F942A1655B8B8B22E48AD0A0BAB24184 /* Pods-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F265A7DBDA877ABDB77EAFA1D6DB53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D0D38B520682FF3809CC35D6DE2A3FD /* Identifiable.swift in Sources */,
+				CD90CAF56BD172D8B505E019BD0C1026 /* IndexPath+Sweet.swift in Sources */,
+				AC65EB5D67EA3ED9225FE1694BABBD01 /* Jiggly.swift in Sources */,
+				320912485CB803CBBEEAA92AE5C806CC /* KeyboardAwareInputViewProtocol.swift in Sources */,
+				9C82B100E68A778F6B7936760A35E959 /* OpenInSafariActivity.swift in Sources */,
+				81A0B7E7DA736240D2E6899C239FE1F6 /* SearchableCollectionController.swift in Sources */,
+				689DD46E4F006EDD25254304C3533B45 /* String+Sweet.swift in Sources */,
+				99A85D22F3889D3B8640D909F60595A2 /* SweetCollectionController.swift in Sources */,
+				AB3A66BAEFC7C5BF62C89DE441AF29AD /* SweetTableController.swift in Sources */,
+				209BF359B2ABC308C038189D5C203A04 /* SweetUIKit-dummy.m in Sources */,
+				3E53C549B42CDA39FA0ACFD176CE9B13 /* UIAlertController+Sweet.swift in Sources */,
+				488643F5B34D12A6B8A4FB7C34BEAECD /* UICollectionView+Sweet.swift in Sources */,
+				81D19610B7C34C90A8EF47C7BBA12118 /* UIColor+Sweet.swift in Sources */,
+				A01D3EF4141DD359068A0E925D0C4EAD /* UIImage+Sweet.swift in Sources */,
+				718D7A1FBC9A1F4DF3FB544188A0F00B /* UILabel+Sweet.swift in Sources */,
+				F75C1560D3C4D647FEE4AEE0D92521AF /* UILocalNotification+Sweet.swift in Sources */,
+				56AF998ECC0CB184FE83FD4BC88E174D /* UIScrollView+Sweet.swift in Sources */,
+				9346EAE4C50452EB76AC4C6D17636CF4 /* UITableView+Sweet.swift in Sources */,
+				F2849A578007DDAEF41A0F2506897AD7 /* UIView+Sweet.swift in Sources */,
+				B6A84A1F154A9CB2DBE8D4AFBD7DB8E6 /* UIViewController+Sweet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC802FC8F6F5DFB4E92FD66D1F7C5B14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C6AA042A9290DAFB6CF8D8C8D5E711B /* Abstraction.swift in Sources */,
+				454BD12A84CD5AFDF5F13DDEE0705BEF /* Constrainable.swift in Sources */,
+				D354487E5689D76F96ED9F61C1CEC0F2 /* Constraints.swift in Sources */,
+				903701CD5099CB4BC7F96FD20C33CF2F /* Stack.swift in Sources */,
+				458D2717B87F4572D67FD07C26F8DF84 /* TinyConstraints-dummy.m in Sources */,
+				555BD8D2FE125D031ECA269217ACA7C9 /* TinyConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		54E56AA0C6E3C0CBDA554B1DEF0F9B11 /* PBXTargetDependency */ = {
+		463810EDD31DAD1A857A4D1423561459 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TinyConstraints;
-			target = 973CE9202578D4B5ABF114A8CFA08E8F /* TinyConstraints */;
-			targetProxy = B9B830C999B310E20B5662D94BBBE24D /* PBXContainerItemProxy */;
+			target = BC0E9E75C549E84967152B018BE9A66A /* TinyConstraints */;
+			targetProxy = 3AB442E801112891652A3BF440D0BAD9 /* PBXContainerItemProxy */;
 		};
-		657A252F3E18D96642461D165E11A99C /* PBXTargetDependency */ = {
+		8A907EE9721743B6C030BD9CD466B166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SweetUIKit;
+			target = 8B600C5FD6A9E4897F9AFAE4E19EB909 /* SweetUIKit */;
+			targetProxy = C886CF0854AD659511D8467DDA557B72 /* PBXContainerItemProxy */;
+		};
+		AF870BF4C7E002FD052C4E80201DCC3F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BouncyLayout;
 			target = 596E2BF0D45B6D6BBF2898BEBD5295DD /* BouncyLayout */;
-			targetProxy = 310D4E2FF3B6A66ECE2847DF9FE0A69F /* PBXContainerItemProxy */;
+			targetProxy = 9F205419AAC2AE4C79F732F22F6CC83C /* PBXContainerItemProxy */;
+		};
+		BDAEDC057BF8A86CED9402236CBB8FE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SweetUIKit-SweetUIKitResources";
+			target = 05A50C4187BBE8BB97FBEC4F0E86810D /* SweetUIKit-SweetUIKitResources */;
+			targetProxy = 37ACC21E048C6E83E9F5F910AA467E31 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		B5D319E5C605D8FD96AA71FC42953C6E /* OpenInSafariActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF3016C680274B2CA8380E89DB8E6650 /* OpenInSafariActivity.strings */,
+			);
+			name = OpenInSafariActivity.strings;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		075BFA817BA8090DABE1716C91702693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4298B2720762BFD8EBDBECDE5222B4F /* SweetUIKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SweetUIKit/SweetUIKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SweetUIKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SweetUIKit/SweetUIKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SweetUIKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1A8194F606BCF1FAF4ECB9BA8482F3DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6C375045D337497A1EAEEBD548B93A7 /* TinyConstraints.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TinyConstraints/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TinyConstraints;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		27D11E39D102D18D2043FB31F23BB83E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9252CA1010DC7318740CA18AE4C01C0 /* BouncyLayout.xcconfig */;
+			baseConfigurationReference = 40DD710DF61E6276D2905E6914AA976A /* BouncyLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -422,6 +764,23 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		414761D9A00B5DF17DC4E4DC85371480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4298B2720762BFD8EBDBECDE5222B4F /* SweetUIKit.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SweetUIKit";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SweetUIKit/ResourceBundle-SweetUIKitResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = SweetUIKitResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
 		};
 		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -471,9 +830,64 @@
 			};
 			name = Debug;
 		};
+		50C13683B9E06E626DBA0410ABF059EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75234299E60DEC5DC40442EDB71DEF2B /* Pods-iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iOS/Pods-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7C3AD88C7F55E2698984A02E7B41AC4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4298B2720762BFD8EBDBECDE5222B4F /* SweetUIKit.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SweetUIKit";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SweetUIKit/ResourceBundle-SweetUIKitResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = SweetUIKitResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		B8F6367F8BEE18E4FD0D54CAD7E70BAD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9252CA1010DC7318740CA18AE4C01C0 /* BouncyLayout.xcconfig */;
+			baseConfigurationReference = 40DD710DF61E6276D2905E6914AA976A /* BouncyLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -550,9 +964,9 @@
 			};
 			name = Release;
 		};
-		C7ECFC8EF83FF44A6095590B600C5B7D /* Release */ = {
+		C75F76FC7529FFD41169A4D0DD26306E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75234299E60DEC5DC40442EDB71DEF2B /* Pods-iOS.release.xcconfig */;
+			baseConfigurationReference = F6C375045D337497A1EAEEBD548B93A7 /* TinyConstraints.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -566,18 +980,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-iOS/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TinyConstraints/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iOS/Pods-iOS.modulemap";
+				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_iOS;
+				PRODUCT_NAME = TinyConstraints;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -588,7 +998,7 @@
 			};
 			name = Release;
 		};
-		D4571206A635517819836D68B7708D9A /* Debug */ = {
+		CEED66A6C74D70B32A8F19E0E66EB4E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6F653571C9BBF67D069D4F9B02EF884D /* Pods-iOS.debug.xcconfig */;
 			buildSettings = {
@@ -627,43 +1037,9 @@
 			};
 			name = Debug;
 		};
-		F4A78C50839C80FE9B160027642B1B94 /* Release */ = {
+		DC494565658BBDF5F262152C83E5C3CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6310069B4B7C1B72FF3E30392919C725 /* TinyConstraints.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TinyConstraints/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TinyConstraints;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F4C7957B458E0BDE9A08083884A88603 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6310069B4B7C1B72FF3E30392919C725 /* TinyConstraints.xcconfig */;
+			baseConfigurationReference = B4298B2720762BFD8EBDBECDE5222B4F /* SweetUIKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -677,14 +1053,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TinyConstraints/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SweetUIKit/SweetUIKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SweetUIKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SweetUIKit/SweetUIKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TinyConstraints;
+				PRODUCT_NAME = SweetUIKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -699,11 +1075,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0090642E8BC5F3130E58D808F180E449 /* Build configuration list for PBXNativeTarget "TinyConstraints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A8194F606BCF1FAF4ECB9BA8482F3DA /* Debug */,
+				C75F76FC7529FFD41169A4D0DD26306E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
 				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		316DCD041FB33395065CC10B41DC1701 /* Build configuration list for PBXNativeTarget "SweetUIKit-SweetUIKitResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				414761D9A00B5DF17DC4E4DC85371480 /* Debug */,
+				7C3AD88C7F55E2698984A02E7B41AC4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -717,20 +1111,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF6FC4FC2A1D65B3172C513AAF129A5A /* Build configuration list for PBXNativeTarget "TinyConstraints" */ = {
+		9C087998B8D54B14BDFB9094740B888E /* Build configuration list for PBXNativeTarget "Pods-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F4C7957B458E0BDE9A08083884A88603 /* Debug */,
-				F4A78C50839C80FE9B160027642B1B94 /* Release */,
+				CEED66A6C74D70B32A8F19E0E66EB4E4 /* Debug */,
+				50C13683B9E06E626DBA0410ABF059EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA20190D6FFD39939E2CC1324ED21EC0 /* Build configuration list for PBXNativeTarget "Pods-iOS" */ = {
+		F716410AADF26B7AE6BB78AB02115135 /* Build configuration list for PBXNativeTarget "SweetUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D4571206A635517819836D68B7708D9A /* Debug */,
-				C7ECFC8EF83FF44A6095590B600C5B7D /* Release */,
+				DC494565658BBDF5F262152C83E5C3CD /* Debug */,
+				075BFA817BA8090DABE1716C91702693 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
