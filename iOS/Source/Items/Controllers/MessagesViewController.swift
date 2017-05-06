@@ -61,8 +61,15 @@ class MessagesViewController: UIViewController {
         return view
     }()
 
+    
+    lazy var animationView: UIView = {
+        let view = AnimationContainerView(frame: CGRect.zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     var textInputBottomConstraint: NSLayoutConstraint!
+    var animationContainerHeightConsraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,11 +78,17 @@ class MessagesViewController: UIViewController {
         
         view.addSubview(collectionView)
         view.addSubview(textInputView)
+        view.addSubview(animationView)
         
         textInputView.left(to: view)
         textInputView.right(to: view)
         textInputBottomConstraint = textInputView.bottom(to: view)
         textInputView.height(40.0)
+        
+        animationView.left(to: view)
+        animationView.right(to: view)
+        animationView.height(50.0)
+        animationView.bottomToTop(of: textInputView)
         
         collectionView.top(to: view)
         collectionView.left(to: view)
