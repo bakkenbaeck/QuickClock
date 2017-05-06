@@ -9,7 +9,7 @@ struct Message {
 }
 
 extension Message {
-    
+
     static func random() -> Message {
         return Message(title: randomString, text: randomString, didSent: randomBool, image: randomImage)
     }
