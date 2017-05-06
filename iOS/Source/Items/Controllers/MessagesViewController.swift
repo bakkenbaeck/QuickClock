@@ -17,6 +17,12 @@ struct IndexPathSizes {
 
 class MessagesViewController: UIViewController {
     
+    lazy var scenario: Scenario = {
+        let scenario = Scenario()
+        scenario.delegate = self
+        
+        return scenario
+    }()
     
     var sizeFor = IndexPathSizes()
     
@@ -53,33 +59,36 @@ class MessagesViewController: UIViewController {
         return view
     }()
 
+    static let animationViewHeightConstraint: CGFloat = 30.0
     
-    lazy var animationView: UIView = {
+    lazy var animationView: AnimationContainerView = {
         let view = AnimationContainerView(frame: CGRect.zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
     var textInputBottomConstraint: NSLayoutConstraint!
-    var animationContainerHeightConsraint: NSLayoutConstraint!
+    var animationContainerHeightConsraint: NSLayoutConstraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "@Quick Clock"
+        title = "Quick Clock"
+        
+        view.backgroundColor = .white
         
         view.addSubview(collectionView)
         view.addSubview(textInputView)
         view.addSubview(animationView)
         
-        textInputView.left(to: view)
-        textInputView.right(to: view)
-        textInputBottomConstraint = textInputView.bottom(to: view)
+        textInputView.left(to: view, offset: 3.0)
+        textInputView.right(to: view, offset: 3.0)
+        textInputBottomConstraint = textInputView.bottom(to: view, offset: -5.0)
         textInputView.height(40.0)
         
         animationView.left(to: view)
         animationView.right(to: view)
-        animationView.height(50.0)
+        animationContainerHeightConsraint = animationView.height(0.0)
         animationView.bottomToTop(of: textInputView)
         
         collectionView.top(to: view)
@@ -87,13 +96,57 @@ class MessagesViewController: UIViewController {
         collectionView.right(to: view)
         collectionView.bottomToTop(of: textInputView)
         
-        collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 15.0, right: 0.0)
+        collectionView.contentInset = UIEdgeInsets(top: 5.0, left: 0.0, bottom: 15.0, right: 0.0)
     }
     
     func calculateSize(for indexPath: IndexPath) -> CGSize {
         dummyCell.message = messages[indexPath.item]
         
         return dummyCell.size(for: collectionView.bounds.width)
+    }
+    
+    func stopTypingAnimation() {
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
+            self.animationView.imageView.alpha = 0.0
+        }) { finished in
+            self.animationContainerHeightConsraint?.constant = 0.0
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func startTypingAnimation() {
+        self.animationView.imageView.alpha = 0.0
+        
+        self.animationContainerHeightConsraint?.constant = MessagesViewController.animationViewHeightConstraint
+        self.view.layoutIfNeeded()
+        
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
+            self.animationView.imageView.alpha = 1.0
+        }, completion: nil)
+    }
+}
+
+extension MessagesViewController: ScenarioDelegate {
+    func didResponse(on scenario: Scenario) {
+        self.messages.append(Message(title: "Clocky", text: scenario.timeString, didSent: false, image: nil))
+        collectionView.reloadData()
+        collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height - 15.0)
+    }
+    
+    func didPause(on scenario: Scenario) {
+        self.stopTypingAnimation()
+    }
+    
+    func didType(on scenario: Scenario) {
+        self.startTypingAnimation()
+    }
+    
+    func didReadMessage(on scenario: Scenario) {
+    
+    }
+    
+    func didDeliverMessage(on scenario: Scenario) {
+    
     }
 }
 
@@ -103,6 +156,14 @@ extension MessagesViewController: MessageInputViewDelegate {
         if let text = inputView.textField.text as String? {
             self.messages.append(Message(title: "Y.O.U.", text: text, didSent: true, image: nil))
             collectionView.reloadData()
+            
+            self.scenario.createScenario()
+            self.scenario.executeScenario()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+                self.startTypingAnimation()
+            })
+            
             collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height - 15.0)
         }
     }
@@ -140,7 +201,7 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout {
 
 extension MessagesViewController: KeyboardAwareAccessoryViewDelegate {
     func inputView(_ inputView: KeyboardAwareInputAccessoryView, shouldUpdatePosition keyboardOriginYDistance: CGFloat) {
-        self.textInputBottomConstraint.constant = keyboardOriginYDistance
+        self.textInputBottomConstraint.constant = keyboardOriginYDistance - 10.0
         self.view.layoutIfNeeded()
     }
     
