@@ -59,7 +59,7 @@ class MessagesViewController: UIViewController {
         return view
     }()
 
-    static let animationViewHeightConstraint: CGFloat = 50.0
+    static let animationViewHeightConstraint: CGFloat = 30.0
     
     lazy var animationView: AnimationContainerView = {
         let view = AnimationContainerView(frame: CGRect.zero)
@@ -118,7 +118,6 @@ class MessagesViewController: UIViewController {
         self.animationView.imageView.alpha = 0.0
         
         self.animationContainerHeightConsraint?.constant = MessagesViewController.animationViewHeightConstraint
-        self.view.setNeedsLayout()
         self.view.layoutIfNeeded()
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
@@ -131,6 +130,7 @@ extension MessagesViewController: ScenarioDelegate {
     func didResponse(on scenario: Scenario) {
         self.messages.append(Message(title: "Clocky", text: scenario.timeString, didSent: false, image: nil))
         collectionView.reloadData()
+        collectionView.contentOffset = CGPoint(x: 0.0, y: self.collectionView.contentSize.height - 15.0)
     }
     
     func didPause(on scenario: Scenario) {

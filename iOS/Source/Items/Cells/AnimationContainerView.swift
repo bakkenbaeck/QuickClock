@@ -5,7 +5,7 @@ final class AnimationContainerView: UIView {
     
     private(set) lazy var imageView: UIImageView = {
         let view = UIImageView.init(frame: CGRect.zero)
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleAspectFill
         let typingGif = UIImage.gifImageWithName("typing")
         view.image = typingGif
         
@@ -25,10 +25,10 @@ final class AnimationContainerView: UIView {
     private func addSubviewsAndConstraints() {
         addSubview(imageView)
         
-        imageView.top(to: self)
+        imageView.top(to: self, offset: -10.0)
         imageView.left(to: self, offset: 20.0)
         imageView.width(50)
-        imageView.bottom(to: self)
+        imageView.bottom(to: self, offset: -10.0)
         
         imageView.layer.cornerRadius = 10.0
         imageView.layer.masksToBounds = true
