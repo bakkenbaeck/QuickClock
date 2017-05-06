@@ -29,15 +29,6 @@ class MessagesViewController: UIViewController {
     
     lazy var messages = (0..<100).map { _ in Message.random() }
     
-//    lazy var layout: UICollectionViewFlowLayout = {
-//        let layout = UICollectionViewFlowLayout()
-//        layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
-//        layout.minimumInteritemSpacing = 0
-//        layout.minimumLineSpacing = 0
-//        
-//        return layout
-//    }()
-    
     lazy var layout: BouncyLayout = {
         let layout = BouncyLayout()
         layout.minimumInteritemSpacing = 0
@@ -49,9 +40,7 @@ class MessagesViewController: UIViewController {
     lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
         view.register(MessageCell.self, forCellWithReuseIdentifier: MessageCell.reuseIdentifier)
-        view.delegate = self
         view.dataSource = self
-        view.prefetchDataSource = self
         view.backgroundColor = .white
         
         return view
@@ -73,12 +62,6 @@ class MessagesViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: margin + 10, left: 0, bottom: margin + 10, right: 0)
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: margin, left: 0, bottom: margin, right: 0)
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        
-//        collectionView.reloadData()
-//    }
     
     func calculateSize(for indexPath: IndexPath) -> CGSize {
         
@@ -117,20 +100,3 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension MessagesViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("didSelectItemAt:\(indexPath)")
-    }
-}
-
-extension MessagesViewController: UICollectionViewDataSourcePrefetching {
-    
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-//        print("prefetchItemsAt:\(indexPaths)")
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
-//        print("cancelPrefetchingForItemsAt:\(indexPaths)")
-    }
-}
