@@ -17,7 +17,7 @@ struct IndexPathSizes {
 
 class MessagesViewController: UIViewController {
     
-   var status: Status = .read {
+   var status: Status = .none {
        didSet {
            self.collectionView.reloadData()
        }
@@ -96,9 +96,13 @@ class MessagesViewController: UIViewController {
     
     func calculateSize(for indexPath: IndexPath) -> CGSize {
         dummyCell.message = messages[indexPath.item]
-        dummyCell.status = self.status
-        
-        return dummyCell.size(for: collectionView.bounds.width)
+
+        let lastMessage = indexPath.row == messages.count - 1
+        dummyCell.status = lastMessage ? self.status : .none
+
+        let size = dummyCell.size(for: collectionView.bounds.width)
+
+        return size
     }
 }
 
@@ -120,7 +124,9 @@ extension MessagesViewController: UICollectionViewDataSource {
         
         if var cell = cell as? MessageCellProtocol {
             let message = messages[indexPath.item]
-            cell.status = self.status
+            let lastMessage = indexPath.row == messages.count - 1
+            cell.status = lastMessage ? self.status : .none
+            
             cell.message = message
         }
         
@@ -135,11 +141,8 @@ extension MessagesViewController: UICollectionViewDataSource {
 extension MessagesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if sizeFor[indexPath] == nil {
-            sizeFor[indexPath] = calculateSize(for: indexPath)
-        }
-        
+        sizeFor[indexPath] = calculateSize(for: indexPath)
+
         return sizeFor[indexPath]!
     }
 }

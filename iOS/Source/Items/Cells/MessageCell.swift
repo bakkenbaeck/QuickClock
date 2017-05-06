@@ -164,23 +164,16 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
 
         var statusLabelHeight: CGFloat  = 0.0
         switch self.status {
-        case .none:
-            statusLabelHeightConstraint.constant = 0.0
-            self.statusLabel.text = ""
         case .delivered:
-            self.statusLabel.text = "Delivered"
             statusLabelHeight = 20.0
-            statusLabelHeightConstraint.constant = 20.0
         case .read:
             statusLabelHeight = 20.0
-            statusLabelHeightConstraint.constant = 20.0
-            self.statusLabel.text = "Read"
+        default: break
         }
 
         let textHeight = message.text.height(withConstrainedWidth: maxWidth - 20, font: textFont)
-
         let cellHeight = ceil(textHeight + 10 + statusLabelHeight)
-        print(cellHeight)
+
         return CGSize(width: ceil(width), height: cellHeight)
     }
 }
