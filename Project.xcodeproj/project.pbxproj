@@ -22,6 +22,7 @@
 		2B0E40AB1EBDFFAE001A42D6 /* UIColor+QuickClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0E40AA1EBDFFAE001A42D6 /* UIColor+QuickClock.swift */; };
 		2B0E40AD1EBE0002001A42D6 /* String+QuickClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0E40AC1EBE0002001A42D6 /* String+QuickClock.swift */; };
 		2B0E40AF1EBE004B001A42D6 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0E40AE1EBE004B001A42D6 /* MessageInputView.swift */; };
+		2B0E40B11EBE1A9C001A42D6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0E40B01EBE1A9C001A42D6 /* background.png */; };
 		2BBE4BBA1EBDF35500E9A772 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE4BB91EBDF35500E9A772 /* MessageCell.swift */; };
 		2BBE4BBD1EBDF36900E9A772 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE4BBC1EBDF36900E9A772 /* Message.swift */; };
 		2BBE4BBF1EBDF3EA00E9A772 /* UIView+QuickClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE4BBE1EBDF3EA00E9A772 /* UIView+QuickClock.swift */; };
@@ -45,6 +46,7 @@
 		2B0E40AA1EBDFFAE001A42D6 /* UIColor+QuickClock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+QuickClock.swift"; sourceTree = "<group>"; };
 		2B0E40AC1EBE0002001A42D6 /* String+QuickClock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+QuickClock.swift"; sourceTree = "<group>"; };
 		2B0E40AE1EBE004B001A42D6 /* MessageInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
+		2B0E40B01EBE1A9C001A42D6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		2BBE4BB91EBDF35500E9A772 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		2BBE4BBC1EBDF36900E9A772 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Model/Message.swift; sourceTree = "<group>"; };
 		2BBE4BBE1EBDF3EA00E9A772 /* UIView+QuickClock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+QuickClock.swift"; path = "Extension/UIView+QuickClock.swift"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				146E279F1BCD51F200959BBA /* LaunchScreen.xib */,
 				146E27A11BCD51F200959BBA /* Images.xcassets */,
 				146E27A21BCD51F200959BBA /* Info.plist */,
+				2B0E40B01EBE1A9C001A42D6 /* background.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				146E27AA1BCD51F200959BBA /* Images.xcassets in Resources */,
+				2B0E40B11EBE1A9C001A42D6 /* background.png in Resources */,
 				146E27A91BCD51F200959BBA /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
