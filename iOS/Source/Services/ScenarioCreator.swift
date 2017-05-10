@@ -50,8 +50,8 @@ final class Scenario {
             events.append(Event(type: .pause, delay: self.randomEventDelay()))
             events.append(Event(type: .type, delay: self.randomEventDelay()))
         }
-        events.append(Event(type: .pause, delay: 0.1))
-        events.append(Event(type: .response, delay: self.randomEventDelay()))
+        events.append(Event(type: .pause, delay: self.randomEventDelay()))
+        events.append(Event(type: .response, delay: 0.1))
 
         return events
     }
@@ -64,6 +64,8 @@ final class Scenario {
         self.timer?.invalidate()
         self.timer = nil
         self.timer = Timer.scheduledTimer(timeInterval: event.delay, target: self, selector: #selector(self.timerAction(_:)), userInfo: ["event" : event], repeats: false)
+        
+        self.testje
     }
 
     //MARK: - Execute event
