@@ -1,46 +1,56 @@
 import UIKit
 
+enum Status: Int {
+    case none, delivered, read
+}
+
 protocol MessageCellProtocol {
     static var reuseIdentifier: String { get }
-    var titleFont: UIFont { get }
     var textFont: UIFont { get }
-    
+    var statusFont: UIFont { get }
+
     var message: Message? { get set }
+    var status: Status { get set }
     func size(for width: CGFloat) -> CGSize
 }
 
 class MessageCell: UICollectionViewCell, MessageCellProtocol {
-    
+
+
     static var reuseIdentifier = "MessageCell"
-    var titleFont: UIFont = UIFont(name: "Helvetica", size: 16)!
-    var textFont: UIFont = UIFont(name: "Helvetica", size: 12)!
-    
-    lazy var titleLabel: UILabel = {
-        let view = UILabel()
-        view.numberOfLines = 0
-        view.font = self.titleFont
-        
-        view.setContentCompressionResistancePriority(UILayoutPriorityDefaultHigh, for: .vertical)
-        
-        return view
+    var textFont: UIFont = UIFont(name: "Helvetica", size: 16)!
+    var statusFont: UIFont = UIFont(name: "Helvetica", size: 12)!
+
+    var status: Status = .none {
+        didSet {
+            switch self.status {
+            case .none:
+                self.statusLabel.text = ""
+            case .delivered:
+                self.statusLabel.text = "Delivered"
+            case .read:
+                self.statusLabel.text = "Read"
+            }
+
+            self.layoutIfNeeded()
+        }
+    }
+
+    lazy var statusLabel: UILabel = {
+        let statusLabel = UILabel()
+        statusLabel.font = self.statusFont
+        statusLabel.textAlignment = .right
+        statusLabel.textColor = .darkGray
+
+        return statusLabel
     }()
-    
+
     lazy var textLabel: UILabel = {
         let view = UILabel()
         view.numberOfLines = 0
         view.font = self.textFont
         
         view.setContentCompressionResistancePriority(UILayoutPriorityDefaultHigh, for: .vertical)
-        
-        return view
-    }()
-    
-    private lazy var imageView: UIImageView = {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFill
-        view.clipsToBounds = true
-        
-        view.setContentCompressionResistancePriority(UILayoutPriorityDefaultLow, for: .vertical)
         
         return view
     }()
@@ -62,52 +72,47 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.isOpaque = false
-        
-        let margin: CGFloat = 10
-        
+
+        contentView.addSubview(statusLabel)
+        contentView.addSubview(container)
+        container.addSubview(textLabel)
+
+        contentView.addLayoutGuide(rightSpacing)
         contentView.addLayoutGuide(leftSpacing)
         leftSpacing.top(to: contentView)
         leftSpacing.left(to: contentView, offset: 10)
         leftSpacing.bottom(to: contentView)
-        
-        contentView.addLayoutGuide(rightSpacing)
+
         rightSpacing.top(to: contentView)
         rightSpacing.right(to: contentView, offset: -10)
         rightSpacing.bottom(to: contentView)
-        
+
         leftWidthSmall.isActive = false
         rightWidthBig.isActive = false
         leftWidthBig.isActive = true
         rightWidthSmall.isActive = true
-        
-        contentView.addSubview(container)
+
         container.top(to: contentView)
         container.leftToRight(of: leftSpacing)
-        container.bottom(to: contentView)
+        container.bottomToTop(of: statusLabel)
         container.rightToLeft(of: rightSpacing)
-        
-        container.addSubview(imageView)
-        imageView.top(to: container)
-        imageView.left(to: container)
-        imageView.right(to: container)
-        
-        container.addSubview(titleLabel)
-        titleLabel.topToBottom(of: imageView, offset: margin)
-        titleLabel.left(to: container, offset: margin)
-        titleLabel.right(to: container, offset: -margin)
-        
-        container.addSubview(textLabel)
-        textLabel.topToBottom(of: titleLabel, offset: margin)
-        textLabel.left(to: container, offset: margin)
-        textLabel.bottom(to: container, offset: -margin)
-        textLabel.right(to: container, offset: -margin)
+
+        textLabel.top(to: container, offset: 5)
+        textLabel.left(to: container, offset: 10)
+        textLabel.bottom(to: container, offset: -5)
+        textLabel.right(to: container, offset: -10)
+
+        statusLabel.leftToRight(of: leftSpacing)
+        statusLabel.height(20)
+        statusLabel.rightToLeft(of: rightSpacing)
+        statusLabel.bottom(to: contentView)
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
         fixCorners()
     }
-    
+
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         
@@ -117,22 +122,19 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
     
     func fixCorners() {
         guard let message = message else { return }
-        let corners: UIRectCorner = message.didSent ? [.bottomLeft, .topLeft, .topRight] : [.bottomRight, .topLeft, .topRight]
+        let corners: UIRectCorner = message.isOutgoing ? [.bottomLeft, .topLeft, .topRight] : [.bottomRight, .topLeft, .topRight]
         container.roundCorners(corners, radius: 10)
     }
     
     var message: Message? = nil {
         didSet {
             guard let message = message else { return }
-            imageView.image = message.image
-            titleLabel.text = message.title
             textLabel.text = message.text
             
-            container.backgroundColor = message.didSent ? .quickClockGreen : .quickClockGray
-            titleLabel.textColor = message.didSent ? .quickClockWhite : .quickClockDarkGray
-            textLabel.textColor = message.didSent ? .quickClockWhite : .quickClockDarkGray
-            
-            if message.didSent {
+            container.backgroundColor = message.isOutgoing ? .quickClockGreen : .quickClockGray
+            textLabel.textColor = message.isOutgoing ? .quickClockWhite : .quickClockDarkGray
+
+            if message.isOutgoing {
                 leftWidthSmall.isActive = false
                 rightWidthBig.isActive = false
                 leftWidthBig.isActive = true
@@ -157,19 +159,19 @@ class MessageCell: UICollectionViewCell, MessageCellProtocol {
         guard let message = message else { return .zero }
         
         let maxWidth: CGFloat = width - 80 - 20
-        
-        var imageHeight: CGFloat = 0
-        if let image = message.image {
-            
-            let scaleFactor = maxWidth / image.size.width
-            let targetHeight = image.size.height * scaleFactor
-            
-            imageHeight = min(200, targetHeight)
-        }
-        
-        let titleHeight = message.title.height(withConstrainedWidth: maxWidth - 20, font: titleFont)
+
+        var statusLabelHeight: CGFloat  = 20.0
+//        switch self.status {
+//        case .delivered:
+//            statusLabelHeight = 20.0
+//        case .read:
+//            statusLabelHeight = 20.0
+//        default: break
+//        }
+
         let textHeight = message.text.height(withConstrainedWidth: maxWidth - 20, font: textFont)
-        
-        return CGSize(width: ceil(width), height: ceil(imageHeight + titleHeight + textHeight + 30))
+        let cellHeight = ceil(textHeight + 10 + statusLabelHeight)
+
+        return CGSize(width: ceil(width), height: cellHeight)
     }
 }
